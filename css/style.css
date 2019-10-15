@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+:root {
+  --mainPink: rgb(71, 67, 5);
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --greyTrans: rgba(206, 202, 191, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+}
+
+body {
+  font-family: "Kaushan Script", cursive;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+}
+
+/* global styles */
+
+.btn-pink {
+  color: var(--mainPink) !important;
+  border-color: var(--mainPink) !important;
+}
+
+/* NAV LINKS  1rem = 16px*/
+
+/* .navbar-toggler{
+  outline:none !important;
+} */
+
+/* #header .navbar {
+  position: sticky;
+
+} */
+
+.toggler-icon {
+  font-size: 2.5rem;
+  color: var(--mainPink);
+}
+
+.nav-link {
+  color: var(--mainPink);
+  transition: all .3s ease-in-out;
+  font-size: 1.5rem;
+}
+
+.nav-link:hover {
+  color: navy;
+}
+
+/* CART STYLES */
+
+.cart-info__icon {
+  color: var(--mainBlack);
+  cursor: pointer;
+}
+
+.cart-info {
+  border: 0.1rem solid var(--mainBlack);
+  color: var(--mainBlack);
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+
+.cart-info:hover {
+  background: var(--mainPink);
+  border-color: var(--mainPink);
+  color: #fff;
+}
+
+.cart-info:hover .cart-info__icon {
+  color: var(--mainWhite);
+}
+
+/* -------> BANNER STYLES */
+
+.max-height {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(var(--greyTrans), var(--greyTrans)), url('../img/headerBcg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner {
+  color: var(--mainWhite);
+  margin-top: -4rem;
+}
+
+.banner-title {
+  color: var(--mainPink);
+  font-size: 4rem;
+}
+
+.banner-link {
+  font-size: 1.5rem;
+  color: var(--mainBlack);
+  border: .2rem solid var(--mainBlack)
+}
+
+.banner-link:hover {
+  background: navy;
+  color: var(--mainPink);
+}
+
+/* ABOUT SECTION */
+
+.about-img__container {
+  position: relative;
+}
+
+.about-img__container::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 1.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid black;
+  z-index: -1;
+  transition: all 1s linear;
+}
+
+.about-img__container:hover::before {
+  top: 0;
+  left: 0;
+}
