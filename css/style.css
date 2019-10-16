@@ -22,6 +22,22 @@ body {
   border-color: var(--mainPink) !important;
 }
 
+.btn-pink:hover {
+  color: var(--mainBlack) !important;
+  background: var(--mainPink) !important;
+}
+
+
+.btn-black {
+  color: var(--mainBlack) !important;
+  border-color: var(--mainBlack) !important;
+}
+
+.btn-black:hover {
+  color: var(--mainPink) !important;
+  background: var(--mainBlack) !important;
+}
+
 /* NAV LINKS  1rem = 16px*/
 
 /* .navbar-toggler{
@@ -127,4 +143,15 @@ body {
 .about-img__container:hover::before {
   top: 0;
   left: 0;
+}
+
+/* ---> STORE SECTION */
+
+.store {
+  background: var(--mainGrey);
+}
+
+.search-box {
+  background: var(--mainPink);
+  color: var(--mainBlack);
 }
