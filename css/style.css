@@ -200,7 +200,7 @@ body {
   color: var(--mainWhite);
 }
 
-/* SERVICES SECTION */
+/*------> SERVICES SECTION */
 
 .services {
   color: #fff;
@@ -215,3 +215,5 @@ body {
 .service-text {
   word-spacing: 0.5rem;
 }
+
+/* 2:14:40 pick video up from there */
