@@ -216,4 +216,22 @@ body {
   word-spacing: 0.5rem;
 }
 
-/* 2:14:40 pick video up from there */
+/* ----> FOOTER */
+
+.footer-title {
+  background: var(--mainBlack);
+}
+
+.footer-contact {
+  background: var(--mainGrey);
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: all .4s ease-in-out;
+}
+
+.footer-icon:hover {
+  color: var(--mainPink);
+}
