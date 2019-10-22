@@ -62,7 +62,7 @@
               ${item.name}
             </p>
             <span>$</span>
-            <span id="cart-item-price" class="cart-item-price mb-0">$ ${item.price}</span>
+            <span id="cart-item-price" class="cart-item-price mb-0">${item.price}</span>
           </div>
           <a href="#" id="cart-item-remove" class="cart-item-remove">
             <i class="fas fa-trash"></i>
@@ -76,7 +76,9 @@
         const total = document.querySelector('.cart-total-container');
 
         cart.insertBefore(cartItem, total);
-        alert('added');
+        alert('This item was added to your cart!');
+
+        showTotals();
 
 
 
@@ -86,18 +88,39 @@
 
 
         // console.log(finalPrice)
-        console.log(item)
-
-
+        // console.log(item)
 
 
 
       }
 
-
     })
   })
 
+
+  //Show totals
+  function showTotals() {
+
+    const total = [];
+    const items = document.querySelectorAll('.cart-item-price');
+
+    items.forEach(function (singleItem) {
+      total.push(parseFloat(singleItem.textContent))
+    });
+    console.log(total)
+
+    const totalMoney = total.reduce(function (total, singleItem) {
+      total += singleItem;
+      return total;
+    }, 0)
+
+    const finalCash = totalMoney.toFixed(2);
+
+    document.getElementById('cart-total').textContent = finalCash;
+    document.getElementById('item-count').textContent = total.length;
+    document.querySelector('.item-total').textContent = finalCash;
+
+  }
 
 
 
